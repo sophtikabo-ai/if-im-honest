@@ -1,36 +1,21 @@
-/* Basic styling for the page */
+/* Basic mobile-first styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #121212; /* Dark background */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.iphone-frame {
-    width: 375px;
-    height: 667px;
-    background-color: #333;
-    border-radius: 36px;
-    overflow: hidden;
-    position: relative;
-    display: block; /* Ensure frame is visible on larger screens (PC) */
-}
-
-/* Only hide the iPhone frame on small screens (mobile devices) */
-@media screen and (max-width: 768px) {
-    .iphone-frame {
-        display: none; /* Hide the iPhone frame on mobile devices */
-    }
+    overflow: hidden; /* Remove scrollbars for full screen */
 }
 
 .container {
-    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Limit the width for readability */
     padding: 20px;
-    max-width: 100%;
+    text-align: center;
 }
 
 textarea {
@@ -38,12 +23,12 @@ textarea {
     height: 100px;
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;  /* Dark background */
+    background-color: #333;
     color: white;
-    border: 1px solid #555; /* Light border */
+    border: none; /* No border */
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding is accounted for in width */
+    box-sizing: border-box;
 }
 
 button {
@@ -60,13 +45,20 @@ button:hover {
     background-color: #0056b3;
 }
 
-.home-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 60px;
-    height: 5px;
-    background-color: #ddd;
+.hint {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#feed {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.post {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    transform: translateX(-50%);
 }
