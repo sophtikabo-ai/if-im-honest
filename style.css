@@ -17,10 +17,10 @@ body {
     border-radius: 36px;
     overflow: hidden;
     position: relative;
-    display: block; /* Ensure frame is visible on larger screens */
+    display: block; /* Ensure frame is visible on larger screens (PC) */
 }
 
-/* Only show the iPhone frame on large screens (desktop) */
+/* Only hide the iPhone frame on small screens (mobile devices) */
 @media screen and (max-width: 768px) {
     .iphone-frame {
         display: none; /* Hide the iPhone frame on mobile devices */
