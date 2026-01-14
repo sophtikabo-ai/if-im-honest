@@ -5,11 +5,11 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     overflow: hidden; /* Remove scrollbars for full screen */
-    flex-direction: column; /* Allow footer to stick to the bottom */
+    flex-direction: column; /* Allow footer to be separate */
 }
 
 .container {
@@ -17,6 +17,7 @@ body {
     max-width: 400px; /* Limit the width for readability */
     padding: 20px;
     text-align: center;
+    margin-bottom: 50px; /* Ensure space for footer */
 }
 
 textarea {
@@ -66,11 +67,13 @@ button:hover {
 
 /* Styling for footer */
 footer {
-    margin-top: auto; /* Push footer to the bottom */
-    padding: 10px;
     background-color: #333;
     text-align: center;
     width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 footer p {
