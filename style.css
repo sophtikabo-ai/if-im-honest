@@ -59,9 +59,11 @@ button {
 }
 
 .post {
-  padding: 14px 0;
+  width: 100%;               /* Ensure the posts are within the container */
+  padding: 14px 20px;
   border-bottom: 1px solid #222;
   line-height: 1.4;
+  box-sizing: border-box;     /* Prevent posts from extending beyond the container */
 }
 
 /* ========================
@@ -75,5 +77,10 @@ button {
   .container {
     width: 100%;
     max-width: 100%;  /* make sure container takes full width on mobile */
+  }
+
+  /* Adjust post padding on smaller screens to keep it inside the container */
+  .post {
+    padding: 14px;
   }
 }
