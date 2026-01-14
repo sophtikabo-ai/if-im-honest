@@ -4,18 +4,19 @@
 body {
   margin: 0;
   padding: 0;
-  background: #222;  /* background around iPhone frame */
+  background: #222;  /* background color */
   font-family: system-ui;
-  overflow-x: hidden; /* prevent horizontal scroll */
   color: white;
   display: flex;
-  justify-content: center;  /* center the iPhone frame horizontally */
-  align-items: center;      /* center the iPhone frame vertically */
+  justify-content: center;  /* center the content horizontally */
+  align-items: flex-start;  /* align content at the top */
   min-height: 100vh;         /* ensure full height of the screen */
+  padding: 20px;             /* add padding to prevent content from touching edges */
 }
 
 .container {
-  width: 100%;
+  width: 100%;               /* let content take full width */
+  max-width: 420px;          /* maximum width on large screens */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -64,44 +65,15 @@ button {
 }
 
 /* ========================
-   iPhone frame styling
+   Mobile-friendly adjustments (no iPhone frame)
 ======================== */
-.iphone-frame {
-  width: 375px;            /* iPhone X width */
-  height: 812px;           /* iPhone X height */
-  border: 16px solid #111; 
-  border-radius: 40px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  background: #0f0f0f;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;          /* Ensure it stays centered in the screen */
-}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;  /* less padding on small screens */
+  }
 
-/* ========================
-   Status bar (top) 
-======================== */
-.status-bar {
-  height: 24px;
-  background: #111;
-  color: #fff;
-  font-size: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 12px;
-  box-sizing: border-box;
-}
-
-/* ========================
-   Home indicator (bottom)
-======================== */
-.home-indicator {
-  height: 5px;
-  width: 134px;
-  background: #333;
-  border-radius: 3px;
-  margin: 8px auto;
+  .container {
+    width: 100%;
+    max-width: 100%;  /* make sure container takes full width on mobile */
+  }
 }
