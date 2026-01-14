@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-  <!-- PWA Meta Tags for Full-Screen Mode and Styling -->
+  <!-- Meta Tags for Full-Screen Mode and Web App Behavior -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#121212">
 
-  <!-- Link to the manifest.json file for PWA functionality -->
+  <!-- Link to manifest.json for PWA -->
   <link rel="manifest" href="manifest.json">
   
   <title>If I’m Honest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- iPhone Frame (Visible on PC, Hidden on Mobile) -->
-  <div class="iphone-frame">
-    <!-- Main Content -->
-    <main class="container">
-      <h1>If I’m honest…</h1>
-      <textarea id="input" maxlength="180" placeholder="Finish the sentence..."></textarea>
-      <button id="submit">Submit</button>
-      <p class="hint">Anonymous. No usernames. 180 characters max.</p>
-      <section id="feed"></section>
-    </main>
-
-    <!-- Home Indicator (bottom) -->
-    <div class="home-indicator"></div>
-  </div>
+  <!-- Main Content -->
+  <main class="container">
+    <h1>If I’m honest…</h1>
+    <textarea id="input" maxlength="180" placeholder="Finish the sentence..."></textarea>
+    <button id="submit">Submit</button>
+    <p class="hint">Anonymous. No usernames. 180 characters max.</p>
+    <section id="feed"></section> <!-- Feed where posts will appear -->
+  </main>
 
   <script src="script.js"></script>
 </body>
