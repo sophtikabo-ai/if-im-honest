@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- PWA Meta Tags for Full-Screen Mode and Styling -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Link to the manifest.json file for PWA functionality -->
+  <link rel="manifest" href="manifest.json">
+  
   <title>If I’m Honest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,8 +19,8 @@
   <!-- iPhone Frame -->
   <div class="iphone-frame">
     
-    <!-- Status Bar (top) -->
-    <div class="status-bar">
+    <!-- Status Bar (top) - Hidden in CSS -->
+    <div class="status-bar" style="display: none;">
       <span class="time">9:41</span>
       <span class="signal">📶</span>
       <span class="battery">🔋100%</span>
@@ -33,4 +42,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
