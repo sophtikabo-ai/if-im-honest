@@ -17,6 +17,14 @@ body {
     border-radius: 36px;
     overflow: hidden;
     position: relative;
+    display: block; /* Ensure frame is visible on larger screens */
+}
+
+/* Only show the iPhone frame on large screens (desktop) */
+@media screen and (max-width: 768px) {
+    .iphone-frame {
+        display: none; /* Hide the iPhone frame on mobile devices */
+    }
 }
 
 .container {
@@ -30,11 +38,12 @@ textarea {
     height: 100px;
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
+    background-color: #333;  /* Dark background */
     color: white;
-    border: none;
+    border: 1px solid #555; /* Light border */
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box; /* Ensures padding is accounted for in width */
 }
 
 button {
