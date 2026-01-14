@@ -1,88 +1,63 @@
-/* ========================
-   General app styling
-======================== */
+/* Basic styling for the page */
 body {
-  margin: 0;
-  padding: 0;
-  background: #222;  /* background color */
-  font-family: system-ui;
-  color: white;
-  display: flex;
-  justify-content: center;  /* center the content horizontally */
-  align-items: flex-start;  /* align content at the top */
-  min-height: 100vh;         /* ensure full height of the screen */
-  padding: 20px;             /* add padding to prevent content from touching edges */
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.iphone-frame {
+    width: 375px;
+    height: 667px;
+    background-color: #333;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
-  width: 100%;               /* let content take full width */
-  max-width: 420px;          /* maximum width on large screens */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 16px;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
 }
 
 textarea {
-  width: 100%;
-  height: 120px;
-  padding: 16px;
-  font-size: 1.05rem;
-  border-radius: 12px;
-  border: none;
-  resize: none;
-  box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
-  width: 100%;
-  padding: 16px;
-  margin-top: 14px;
-  font-size: 1.05rem;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  background: white;
-  color: black;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.hint {
-  text-align: center;
-  opacity: 0.6;
-  margin-top: 10px;
+button:hover {
+    background-color: #0056b3;
 }
 
-#feed {
-  margin-top: 28px;
-}
-
-.post {
-  width: 100%;               /* Ensure the posts are within the container */
-  padding: 14px 20px;
-  border-bottom: 1px solid #222;
-  line-height: 1.4;
-  box-sizing: border-box;     /* Prevent posts from extending beyond the container */
-  margin-bottom: 16px;
-}
-
-/* ========================
-   Mobile-friendly adjustments (no iPhone frame)
-======================== */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 10px;  /* less padding on small screens */
-  }
-
-  .container {
-    width: 100%;
-    max-width: 100%;  /* make sure container takes full width on mobile */
-  }
-
-  /* Adjust post padding on smaller screens to keep it inside the container */
-  .post {
-    padding: 14px;
-  }
+.home-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 60px;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    transform: translateX(-50%);
 }
