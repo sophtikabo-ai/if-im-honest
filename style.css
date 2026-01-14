@@ -5,7 +5,7 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
     margin: 0;
     overflow: hidden; /* Remove scrollbars for full screen */
@@ -16,7 +16,7 @@ body {
     width: 100%;
     max-width: 400px; /* Limit the width for readability */
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Ensure content is centered */
     margin-bottom: 50px; /* Ensure space for footer */
 }
 
@@ -65,7 +65,7 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Styling for footer */
+/* Footer styling */
 footer {
     background-color: #333;
     text-align: center;
