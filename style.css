@@ -34,6 +34,7 @@ textarea {
   border-radius: 12px;
   border: none;
   resize: none;
+  box-sizing: border-box;
 }
 
 button {
@@ -64,6 +65,7 @@ button {
   border-bottom: 1px solid #222;
   line-height: 1.4;
   box-sizing: border-box;     /* Prevent posts from extending beyond the container */
+  margin-bottom: 16px;
 }
 
 /* ========================
