@@ -9,6 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden; /* Remove scrollbars for full screen */
+    flex-direction: column; /* Allow footer to stick to the bottom */
 }
 
 .container {
@@ -61,4 +62,19 @@ button:hover {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+/* Styling for footer */
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
 }
